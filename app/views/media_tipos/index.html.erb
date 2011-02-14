@@ -1,0 +1,23 @@
+<h1>Listing media_tipos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @media_tipos.each do |media_tipo| %>
+  <tr>
+    <td><%= media_tipo.nome %></td>
+    <td><%= link_to 'Show', media_tipo %></td>
+    <td><%= link_to 'Edit', edit_media_tipo_path(media_tipo) %></td>
+    <td><%= link_to 'Destroy', media_tipo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Media tipo', new_media_tipo_path %>
